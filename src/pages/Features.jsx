@@ -1,0 +1,13 @@
+import React from 'react';
+import { ArrowUpRight, Check, CircleHelp, Database, Layers3, LockKeyhole } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { features, APP_URL } from '../data/content.js';
+import { CTASection, Eyebrow, PageShell, SectionHeading } from '../components/Layout.jsx';
+import FeatureCard from '../components/FeatureCard.jsx';
+
+export default function Features() {
+ return <PageShell><section className="page-hero"><div className="container page-hero-inner"><Eyebrow>CAPABILITIES</Eyebrow><h1>Everything you need to<br/><span>make data more useful.</span></h1><p>Explore the JSA workflow, from getting a dataset ready to presenting the results. Capabilities vary by release, so use the live app as the final reference.</p><div className="button-row"><a className="button button-primary" href={APP_URL} target="_blank" rel="noreferrer">Open JSA <ArrowUpRight size={16}/></a><Link className="button button-secondary" to="/docs/quick-start">Read documentation</Link></div></div></section>
+ <section className="section"><div className="container"><div className="feature-grid feature-grid-all">{features.map((f,i)=><FeatureCard key={f.id} feature={f} index={i}/>)}</div></div></section>
+ <section className="section feature-details-section"><div className="container"><SectionHeading eyebrow="THE DETAILS" title="Designed around the steps that matter" >A closer look at how the main capability areas fit together.</SectionHeading><div className="feature-detail-list">{features.map((f,i)=><article className="feature-detail" id={f.id} key={f.id}><div className="detail-number">0{i+1}</div><div className="detail-main"><span className="feature-category">{f.category}</span><h3>{f.title}</h3><p>{f.description}</p><ul>{f.details.map(d=><li key={d}><Check size={15}/>{d}</li>)}</ul></div><div className="detail-aside"><div className="detail-aside-icon">{i===0?<Database/>:i===1?<Layers3/>:i===6?<LockKeyhole/>:<CircleHelp/>}</div><span>Version-aware capabilities</span><small>Check the current app and release notes for exact behavior.</small></div></article>)}</div></div></section>
+ <section className="section note-section"><div className="container"><div className="note-box"><CircleHelp size={19}/><div><strong>One important note</strong><p>This page describes capability areas based on the project’s known development history. It does not guarantee that every operation is available in every release. JSA’s current UI and source code remain the source of truth.</p></div></div></div></section><CTASection title="Ready to explore what your data can tell you?"/></PageShell>
+}
