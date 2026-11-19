@@ -29,6 +29,11 @@ try {
   }
   out = out.replace(marker, `<div id="root">${html}</div>`);
   fs.writeFileSync(dist, out);
+  // Rename so "/" is NOT in the static filesystem — this lets the vercel.json
+  // rewrite "/" -> /api/home take over and do Accept-header negotiation
+  // (Vercel checks the filesystem before rewrites, so "/index.html" would
+  // otherwise always win and markdown-for-agents could never trigger).
+  fs.renameSync('dist/index.html', 'dist/home.html');
   const words = html
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z]+;/g, ' ')

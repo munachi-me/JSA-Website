@@ -1,11 +1,12 @@
 {
+  "functions": {
+    "api/home.js": {
+      "includeFiles": ["dist/home.html", "public/index.md"]
+    }
+  },
   "rewrites": [
-    {
-      "source": "/",
-      "has": [{ "type": "header", "key": "accept", "value": "text/markdown*" }],
-      "destination": "/index.md"
-    },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/", "destination": "/api/home" },
+    { "source": "/(.*)", "destination": "/home.html" }
   ],
   "headers": [
     {
