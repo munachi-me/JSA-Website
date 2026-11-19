@@ -1,5 +1,28 @@
 {
   "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "header", "key": "accept", "value": "text/markdown*" }],
+      "destination": "/index.md"
+    },
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://jsa-website-eta.vercel.app/llms.txt>; rel=\"alternate\"; type=\"text/markdown\", <https://jsa-website-eta.vercel.app/sitemap.xml>; rel=\"alternate\"; type=\"application/xml\", <https://jsa-website-eta.vercel.app/robots.txt>; rel=\"describedby\"; type=\"text/plain\""
+        }
+      ]
+    },
+    {
+      "source": "/index.md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown; charset=utf-8" },
+        { "key": "Vary", "value": "Accept" }
+      ]
+    }
   ]
 }

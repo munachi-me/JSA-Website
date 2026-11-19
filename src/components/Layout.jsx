@@ -39,7 +39,7 @@ export function Footer() {
     <div className="footer-col"><h4>Explore</h4><Link to="/features">Features</Link><Link to="/examples">Examples</Link><Link to="/releases">Releases</Link><Link to="/roadmap">Roadmap</Link></div>
     <div className="footer-col"><h4>Learn</h4><Link to="/docs/introduction">Documentation</Link><Link to="/docs/quick-start">Quick start</Link><Link to="/docs/troubleshooting">Troubleshooting</Link><Link to="/docs/contributing">Contributing</Link></div>
     <div className="footer-col"><h4>Project</h4><a href={REPO_URL} target="_blank" rel="noreferrer">GitHub repository <ArrowUpRight size={13}/></a><a href={APP_URL} target="_blank" rel="noreferrer">Launch JSA <ArrowUpRight size={13}/></a><Link to="/about">About JSA</Link></div>
-  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} JSA · JavaScript Analytics</span><span>Built to make data work feel clearer.</span></div></footer>;
+  </div><div className="container footer-bottom"><span>© {new Date().getFullYear()} JSA · JavaScript Analytics</span><span>Built to make data work feel clearer. <time dateTime="2026-11-19">Updated 19 November 2026</time></span></div></footer>;
 }
 
 export function PageShell({ children, className = '' }) {

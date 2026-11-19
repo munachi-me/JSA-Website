@@ -1,0 +1,17 @@
+# JSA — JavaScript Analytics
+
+> JSA is a data analytics platform for exploring datasets, preparing data, performing analysis, and presenting results through visualizations and dashboards. This site is its documentation and project home.
+
+## Main pages
+- [Home](https://jsa-website-eta.vercel.app/): project overview and highlights
+- [Features](https://jsa-website-eta.vercel.app/features): full list of capabilities
+- [Examples](https://jsa-website-eta.vercel.app/examples): example analyses and dashboards
+- [Releases](https://jsa-website-eta.vercel.app/releases): release notes and versions
+- [Roadmap](https://jsa-website-eta.vercel.app/roadmap): planned work
+- [About](https://jsa-website-eta.vercel.app/about): who is behind JSA
+- [Contributing](https://jsa-website-eta.vercel.app/contributing): how to contribute
+
+## Docs
+- [Introduction](https://jsa-website-eta.vercel.app/docs/introduction): what JSA is and how the workflow fits together
+- [Quick start](https://jsa-website-eta.vercel.app/docs/quick-start): get from a dataset to your first result
+- [Troubleshooting](https://jsa-website-eta.vercel.app/docs/troubleshooting): common issues and fixes
